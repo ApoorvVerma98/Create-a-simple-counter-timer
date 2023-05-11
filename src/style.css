@@ -1,0 +1,40 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.counter-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.counter-btn {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.pause {
+  background-color: #ff4c4c;
+  color: #fff;
+  border: none;
+}
+
+.play {
+  background-color: #6bd672;
+  color: #fff;
+  border: none;
+}
+
+.reset {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+}
