@@ -17,6 +17,11 @@ const Counter = () => {
     return () => clearInterval(timer);
   }, [isRunning]);
 
+  const handleReset = () => {
+    setCount(0);
+    setIsRunning(true);
+  };
+
   const handlePause = () => {
     setIsRunning(false);
   };
@@ -25,14 +30,13 @@ const Counter = () => {
     setIsRunning(true);
   };
 
-  const handleReset = () => {
-    setCount(0);
-    setIsRunning(true);
-  };
 
   return (
     <div className="counter">
       <h1 className="counter-title">Counter: {count}</h1>
+      <button className="counter-btn reset" onClick={handleReset}>
+        Reset
+      </button>
       {isRunning ? (
         <button className="counter-btn pause" onClick={handlePause}>
           Pause
@@ -42,9 +46,7 @@ const Counter = () => {
           Play
         </button>
       )}
-      <button className="counter-btn reset" onClick={handleReset}>
-        Reset
-      </button>
+
     </div>
   );
 };
